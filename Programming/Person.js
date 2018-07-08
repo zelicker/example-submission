@@ -36,7 +36,7 @@ class Person {
         var notFriendOfFriends = friends.concat(this)
         
         // array ชื่อเพื่อนของเพื่อนทั้งหมด
-        var riendOfFriends = friendNetwork.filter(function(person) {
+        var friendOfFriends = friendNetwork.filter(function(person) {
             if(notFriendOfFriends.indexOf(person) === -1) {
               return true;
             }            
@@ -46,12 +46,13 @@ class Person {
     }  
 }
 
-
+//create person
 var a = new Person("a")
 var b = new Person("b")
 var c = new Person("c")
 var d = new Person("d")
 
+//add friends to 'a' and 'b'
 a.addFriends([b,d])
 b.addFriends([c,d])
 
